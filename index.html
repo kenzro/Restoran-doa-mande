@@ -368,15 +368,25 @@
 
         .restaurant-carousel {
             height: 100%;
-            min-height: 380px;
+            position: relative;
         }
 
         .restaurant-carousel .carousel-inner,
-        .restaurant-carousel .carousel-item,
-        .restaurant-carousel .carousel-item img {
+        .restaurant-carousel .carousel-item {
             height: 100%;
-            min-height: 380px;
+        }
+
+        .restaurant-carousel .carousel-item img {
+            width: 100%;
+            height: 480px;
             object-fit: cover;
+            object-position: center;
+        }
+
+        @media (max-width: 991.98px) {
+            .restaurant-carousel .carousel-item img {
+                height: 320px;
+            }
         }
 
         .restaurant-info-panel {
@@ -583,7 +593,7 @@
                         <a class="nav-link" href="#about">about</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#our-rendang">our rendang</a>
+                        <a class="nav-link" href="#rendang">rendang</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#menu">menu</a>
@@ -710,31 +720,31 @@
             <!-- Grid 3 Kolom Sejajar (col-md-4) -->
             <div class="row g-4 align-items-end">
                 
-                <!-- Kolom Kiri: Kartu Persegi "makanan" -->
-                <div class="col-md-4">
+                <!-- Kolom Kiri: Kartu Persegi 1 "rendang" -->
+                <div class="col-md-4" id="rendang">
                     <a href="#" class="menu-square-card" data-bs-toggle="modal" data-bs-target="#menuBookModal">
-                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=800&q=80" 
-                             alt="Hidangan Makanan Doa Mande">
+                        <img src="foto/rendang.jpg" 
+                             alt="Rendang Daging Sapi Doa Mande">
                         <div class="menu-square-overlay">
-                            <span class="menu-square-title">makanan</span>
+                            <span class="menu-square-title">rendang</span>
                         </div>
                     </a>
                 </div>
 
-                <!-- Kolom Tengah: Tautan Menu Book & Kartu Persegi "our rendang" -->
-                <div class="col-md-4 text-center" id="our-rendang">
+                <!-- Kolom Tengah: Tautan Menu Book & Kartu Persegi 2 "tunjang" -->
+                <div class="col-md-4 text-center">
                     <!-- Tautan View Our Menu Book dengan Ikon Buku Terbuka -->
                     <div class="mb-2">
                         <a href="#" class="menu-book-link" data-bs-toggle="modal" data-bs-target="#menuBookModal">
                             <i class="bi bi-book-half"></i> view our menu book
                         </a>
                     </div>
-                    <!-- Kartu Our Rendang -->
+                    <!-- Kartu Tunjang -->
                     <a href="#" class="menu-square-card" data-bs-toggle="modal" data-bs-target="#menuBookModal">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
-                             alt="Our Rendang Doa Mande">
+                        <img src="foto/gulai-tunjang.jpg" 
+                             alt="Gulai Tunjang Doa Mande">
                         <div class="menu-square-overlay">
-                            <span class="menu-square-title">our rendang</span>
+                            <span class="menu-square-title">tunjang</span>
                         </div>
                     </a>
                 </div>
@@ -811,7 +821,7 @@
                                          class="d-block w-100" alt="Suasana Meja Jamuan Restoran">
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&q=80"
+                                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&h=800&q=80"
                                          class="d-block w-100" alt="Dapur Terbuka & Koki Berpengalaman">
                                 </div>
                             </div>
